@@ -284,7 +284,7 @@ function build(D){
   const curHeld=(Math.abs(rawNext-prevHeld)>CONFIG.band)?rawNext:prevHeld;
   const changed=Math.abs(curHeld-prevHeld)>1e-9;
   document.getElementById('targetLbl').textContent=nextTradingDay(dates[i])+" target";
-  document.getElementById('asof').textContent="as of close "+dates[i]+"  ·  QQQ/TQQQ tactical · v3.3 (hot)  ";
+  document.getElementById('asof').textContent="as of close "+dates[i]+"  · v3.3  ";
   const a=alloc(curHeld),ac=document.getElementById('actionCard');
   document.getElementById('bigAction').textContent="HOLD "+a.txt;
   document.getElementById('levLine').textContent=curHeld===0?"out of the market":("effective exposure "+curHeld.toFixed(2)+"x");
